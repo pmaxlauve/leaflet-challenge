@@ -93,8 +93,6 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
       //assign data for earthquakes to a new dictionary
       var quakeData = data.features;
 
-      console.log(quakeData);
-
       var quakes = quakeData.map(function(d) {
         return({
           "lat": d.geometry.coordinates[1],
@@ -149,7 +147,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
           fillColor: color,
           fillOpacity: 1,
           radius: 100
-        }).bindPopup("<p>Magnitude: " + d.magnitude + "</p> <hr> <p>Depth: " + d.depth + "</p>").addTo(map);
+        }).bindPopup("<b>" + d.loc + "</b> <hr> <b>Depth: " + d.depth + "&nbsp;&nbsp;||&nbsp;&nbsp;Mag: " + d.magnitude +"</b>").addTo(map);
       });
 
       //draw the tectonic plates
