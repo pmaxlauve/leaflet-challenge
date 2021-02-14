@@ -126,7 +126,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
 
 
         //create a variable for circle radius based on magnitude
-        var rad = (d.magnitude ** 3)* 1000;
+        var rad = (d.magnitude ** 3)* 1000;  //magnitude cubed for more dramatic effect
         
         //create a circle responsive to depth and magnitude, and bind pop-up information
         L.circle([d.lat, d.lng], {
