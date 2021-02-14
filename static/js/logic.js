@@ -33,11 +33,21 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
 
 var quakeData = data.features;
 
+console.log(data);
+
 console.log(quakeData);
 
 var quakeCoords = quakeData.map(d => d.geometry.coordinates.slice(0,2));
 
 console.log(quakeCoords);
+
+var quakeMag = quakeData.map(d=> d.properties.mag);
+
+console.log(quakeMag);
+
+var quakeDepth = quakeData.map(d => d.geometry.coordinates[2]);
+
+console.log(quakeDepth);
 
 
 
