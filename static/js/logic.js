@@ -132,7 +132,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
         L.circle([d.lat, d.lng], {
           color: color,
           fillColor: color,
-          fillOpacity: 0.75,
+          fillOpacity: 0.5,
           radius: rad
         }).bindPopup("<b>Magnitude: " + d.magnitude + "</b> <hr> <b>Depth: " + d.depth + "</b>").addTo(map);
 
