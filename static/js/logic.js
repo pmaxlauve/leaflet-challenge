@@ -48,7 +48,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     tileSize: 512,
     maxZoom: 18,
     zoomOffset: -1,
-    id: "mapbox/light-v10",
+    id: "mapbox/dark-v10",
     accessToken: API_KEY
   }).addTo(map);
 
