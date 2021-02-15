@@ -58,13 +58,14 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     var div = L.DomUtil.create("div", "info legend");
     var limits = ["<10", "10-30", "30-50", "50-70", "70-90", "90+"];
     var colors = ["#006699", "#33707a", "#667a5c", "#99853d", "#cc8f1f", "#ff9900"];
-    var labels = ["Epicenter Depth (km) "];
+    var labels = ["<b style='color:#828487'>Epicenter Depth (km) &nbsp;</b>"];
 
     
-    //create the html for the legend
+    
     limits.forEach(function(limit, index) {
       labels.push("<b style=\"background-color: " + colors[index] + "\">&nbsp;" + limits[index] + "&nbsp;</b>");
     });
+    //create the html for the legend
     div.innerHTML += "<b>" + labels.join("") + "</b>";
     return div;
   };
